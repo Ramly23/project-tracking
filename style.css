@@ -59,7 +59,7 @@ body {
 }
 
 .border-radius {
-    width: 800px;
+    width: 50%;
     height: 550px;
     background: var(--LightGrayishBlue);
     position: absolute;
