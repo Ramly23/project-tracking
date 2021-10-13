@@ -60,9 +60,9 @@ body {
 
 .border-radius {
     width: 50%;
-    height: 550px;
+    height: 500px;
     background: var(--LightGrayishBlue);
-    position: absolute;
+    position: fixed;
     z-index: -1;
     top: 0;
     right: 0;
