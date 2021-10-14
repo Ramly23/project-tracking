@@ -45,6 +45,10 @@ body {
     letter-spacing: 1px;
 }
 
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
 .nav-links i {
     margin-left: 60px;
     font-size: 8px;
@@ -59,14 +63,14 @@ body {
 }
 
 .border-radius {
-    width: 50%;
+    width: 52%;
     height: 500px;
     background: var(--LightGrayishBlue);
     position: fixed;
     z-index: -1;
     top: 0;
     right: 0;
-    border-bottom-left-radius: 150px;
+    border-bottom-left-radius: 100px;
 }
 
 .row {
@@ -135,6 +139,12 @@ body {
     font-size: 17px;
     font-weight: bold;
     letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.links a:hover {
+    opacity: 0.75;
+    transition: opacity 0.5s;
 }
 
 .links span {
@@ -150,4 +160,189 @@ body {
     position: absolute;
     top: 50%;
     transform: translate(0%, -50%);
+}
+
+@media (min-width: 767px) {
+    .hide-for-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hide-for-mobile {
+        display: none;
+    }
+
+    .nav {
+        padding: 10% 10%;
+    }
+
+    .nav img {
+        width: 25px;
+    }
+
+    .mobile-links {
+        padding: 10% 10%;
+        width: 80%;
+        height: auto;
+        background: var(--white);
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        box-shadow: 0 0 10px 0 lightgrey;
+        display: none;
+    }
+
+    .open.mobile-links {
+        display: block;
+    }
+
+    .mobile-links hr {
+        margin-top: 20px;
+        color: var(--GrayishBlue);
+    }
+
+    .mobile-links a {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        text-decoration: none;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--VeryDarkBlue);
+    }
+
+    .mobile-links a:first-child {
+        margin: 0;
+    }
+
+    .mobile-links a:last-child {
+        color: var(--GrayishBlue);
+    }
+
+    .hidden {
+        display: none;
+    }
+    
+    /* Keyframes */
+
+    .has-fade {
+        visibility: hidden;
+    }
+  
+    @-webkit-keyframes fade-in {
+        from {
+        visibility: hidden;
+        opacity: 0;
+        }
+        1% {
+        visibility: visible;
+        opacity: 0;
+        }
+        to {
+        visibility: visible;
+        opacity: 1;
+        }
+    }
+  
+    @keyframes fade-in {
+        from {
+        visibility: hidden;
+        opacity: 0;
+        }
+        1% {
+        visibility: visible;
+        opacity: 0;
+        }
+        to {
+        visibility: visible;
+        opacity: 1;
+        }
+    }
+
+    .fade-in {
+        -webkit-animation: fade-in 200ms ease-in-out forwards;
+                animation: fade-in 200ms ease-in-out forwards;
+    }
+  
+    @-webkit-keyframes fade-out {
+        from {
+        visibility: visible;
+        opacity: 1;
+        }
+        99% {
+        visibility: visible;
+        opacity: 0;
+        }
+        to {
+        visibility: hidden;
+        opacity: 0;
+        }
+    }
+  
+    @keyframes fade-out {
+        from {
+        visibility: visible;
+        opacity: 1;
+        }
+        99% {
+        visibility: visible;
+        opacity: 0;
+        }
+        to {
+        visibility: hidden;
+        opacity: 0;
+        }
+    }
+
+    .fade-out {
+        -webkit-animation: fade-out 200ms ease-in-out forwards;
+                animation: fade-out 200ms ease-in-out forwards;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .row {
+        flex-direction: column;
+        margin-top: 400px;
+        margin-bottom: 100px;
+    }
+
+    .col img {
+        position: absolute;
+        top: 50%;
+        width: 120%;
+        left: 50%;
+        transform: translate(-38%, -100%);
+    }
+
+    .border-radius {
+        width: 52%;
+        height: 450px;
+        background: var(--LightGrayishBlue);
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        border-bottom-left-radius: 75px;
+    }
+
+    .col h1 {
+        font-size: 40px;
+    }
+
+    .links a {
+        padding: 13px 20px;
+    }
+
+    .links span {
+        letter-spacing: 2px;
+        margin-left: 10px;
+    }
 }

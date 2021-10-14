@@ -24,15 +24,26 @@
       <div class="nav">
         <img src="images/logo.svg" alt="logo">
 
-        <div class="nav-links">
+        <div class="nav-links hide-for-mobile">
           <a href="#">Product</a>
           <a href="#">Features</a>
           <a href="#">Pricing</a>
           <i class="fas fa-circle"></i>
           <a href="#">Login</a>
         </div>
+
+        <img class = 'hide-for-desktop' src="images/icon-hamburger.svg" alt="hamburger" id = 'btnHamburger'>
+        <img class = 'hide-for-desktop hidden' src="images/icon-close.svg" alt="close" id = 'close'>
+        
       </div>
     </nav>
+    <div class="mobile-links has-fade hide-for-desktop">
+      <a href="#">Product</a>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <hr>
+      <a href="#">Login</a>
+    </div>
   </header>
 
   <main>
@@ -55,22 +66,8 @@
       </div>
     </section>
   </main>
-
-  <!--
-  Product
-  Features
-  Pricing
-  Login
-
-  New
-  Monograph Dashboard
-
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
-
-  Schedule a demo
-  to see a live preview
   
+  <!--
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -78,5 +75,7 @@
     </p>
   </footer>
 -->
+
+<script src = 'script.js'></script>
 </body>
 </html>
