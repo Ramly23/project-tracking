@@ -308,6 +308,10 @@ body {
         overflow-x: hidden;
     }
 
+    html {
+        overflow-x: hidden;
+    }
+
     .row {
         flex-direction: column;
         margin-top: 400px;
